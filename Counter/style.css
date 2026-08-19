@@ -1,0 +1,115 @@
+/* Google Fonts Import */
+
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+}
+
+/* Main Container (Card) */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Title */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: #94a3b8;
+}
+
+/* Counter Value Display */
+#value {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin: 1rem 0 2rem 0;
+    color: #f8fafc;
+    transition: all 0.1s ease;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Group Container */
+.button-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Base Button Styles */
+.btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Specific Button Colors */
+.decrease {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.decrease:hover {
+    background-color: #dc2626;
+    box-shadow: 0 6px 15px rgba(239, 68, 68, 0.4);
+    transform: translateY(-2px);
+}
+
+.increase {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.increase:hover {
+    background-color: #059669;
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.reset {
+    background-color: #64748b;
+    color: #ffffff;
+}
+
+.reset:hover {
+    background-color: #475569;
+    box-shadow: 0 6px 15px rgba(100, 116, 139, 0.4);
+    transform: translateY(-2px);
+}
