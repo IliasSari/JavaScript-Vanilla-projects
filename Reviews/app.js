@@ -36,9 +36,9 @@ const author = document.getElementById('author');
 const job = document.getElementById('job');
 const info = document.getElementById('info');
 
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const randomBtn = document.querySelector('.random-btn');
+const prevBtn = document.querySelector('.prevbtn');
+const nextBtn = document.querySelector('.nextbtn');
+const randomBtn = document.querySelector('.randombtn');
 
 // (currentItem)
 let currentItem = 0;
