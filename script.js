@@ -10,6 +10,11 @@ const projects = [
   {
     title: "Reviews",
     path: "./Reviews/index.html",
+  },
+  {
+    title: "Navbar",
+    path: "/Navbar/index.html",
+    description: "ONLY NAVBAR"
   }
 
 ];
