@@ -1,0 +1,137 @@
+/* --- Global Styles & Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f1f5f8;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --- Main Navigation Bar Styles --- */
+nav {
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Header (Logo & Mobile Toggle Button) */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Mobile Menu Toggle Button */
+.nav-toggle {
+  font-size: 1.5rem;
+  color: #49a6e9;
+  background: transparent;
+  border: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: #063251;
+  transform: rotate(90deg); /* Smooth icon rotation on hover */
+}
+
+.logo {
+  height: 40px;
+}
+
+/* --- Mobile Navigation Links (Hidden by default) --- */
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear; /* Smooth dropdown transition */
+}
+
+.links a {
+  color: #324d67;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+}
+
+.links a:hover {
+  background: #e0fcff;
+  color: #49a6e9;
+  padding-left: 1.5rem; /* Slide effect to the right on hover */
+}
+
+/* Class toggled by JavaScript to show the mobile menu */
+.show-links {
+  height: 10rem;
+}
+
+/* Social Icons (Hidden on mobile screens) */
+.social-icons {
+  display: none;
+}
+
+/* --- Desktop Responsive Layout (Screens > 800px) --- */
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  /* Hide the toggle button on larger screens */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Display navigation links horizontally */
+  .links {
+    height: auto !important;
+    display: flex;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+
+  /* Display social icons horizontally */
+  .social-icons {
+    display: flex;
+  }
+
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: #49a6e9;
+    transition: all 0.3s linear;
+  }
+
+  .social-icons a:hover {
+    color: #063251;
+  }
+}
