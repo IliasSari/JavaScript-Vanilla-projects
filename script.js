@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Color Flip",
-    path: "./Color flip/index.html",
+    path: "./Color_flipper/index.html",
   },
   {
     title: "Counter",
