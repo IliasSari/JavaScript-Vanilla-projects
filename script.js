@@ -13,8 +13,12 @@ const projects = [
   },
   {
     title: "Navbar",
-    path: "/Navbar/index.html",
+    path: "./Navbar/index.html",
     description: "ONLY NAVBAR"
+  },
+  {
+    title:"Heart trail animation",
+    path: "Heart_trail_animation\ /"
   }
 
 ];
