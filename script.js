@@ -23,6 +23,10 @@ const projects = [
   {
     title:"Auto text effect animation",
     path: "./Auto_text_effect_animation/index.html"
+  },
+  {
+    title:"Mini calendar",
+    path:"./Mini_calendar/index.html"
   }
 
 ];
