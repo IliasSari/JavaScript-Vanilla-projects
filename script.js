@@ -27,6 +27,10 @@ const projects = [
   {
     title:"Mini calendar",
     path:"./Mini_calendar/index.html"
+  },
+  {
+    title:"Button Ripple Effect",
+    path:"./Button_Ripple_Effect/index.html"
   }
 
 ];
