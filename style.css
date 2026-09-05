@@ -1,78 +1,131 @@
+:root {
+  --bg-color: #0b0f19;
+  --card-bg: rgba(18, 24, 38, 0.6);
+  --card-border: rgba(255, 255, 255, 0.07);
+  --accent-cyan: #38bdf8;
+  --accent-purple: #818cf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
-  background-color: #0f172a;
-  color: #f8fafc;
+  background-color: var(--bg-color);
+  /* Mesh Gradient Background */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.1) 0px, transparent 50%);
+  color: var(--text-main);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
-  padding: 2rem 0;
 }
 
 header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #38bdf8;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
 }
 
 header p {
-  color: #94a3b8;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .card {
-  background: #1e293b;
-  padding: 2rem;
-  border-radius: 12px;
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2.25rem 1.75rem;
+  border-radius: 16px;
   text-decoration: none;
   color: inherit;
-  border: 1px solid #334155;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+  align-items: flex-start; /* Left alignment for more correct typography */
+  text-align: left;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Neon Top Border Effect at Hover */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
-  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5),
+              0 0 30px -10px rgba(56, 189, 248, 0.15);
 }
 
-.icon {
-  font-size: 2.5rem;
-  color: #38bdf8;
-  margin-bottom: 1rem;
+.card:hover::before {
+  opacity: 1;
 }
 
 .card h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.card:hover h2 {
+  color: var(--accent-cyan);
 }
 
 .card p {
-  font-size: 0.9rem;
-  color: #94a3b8;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* If there is not description, it disappears */
+.card p:empty {
+  display: none;
 }
