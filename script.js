@@ -31,6 +31,10 @@ const projects = [
   {
     title:"Button Ripple Effect",
     path:"./Button_Ripple_Effect/index.html"
+  },
+  {
+    title:"Dark mode Toggle",
+    path:"./Dark_mode_toggle/index.html"
   }
 
 ];
