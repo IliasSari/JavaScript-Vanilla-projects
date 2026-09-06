@@ -2,7 +2,9 @@ const inputEl = document.querySelector("input");
 
 const bodyEl = document.querySelector("body");
 inputEl.checked = true;
-updateBody()
+
+inputEl.checked = JSON.parse(localStorage.getItem("mode"));
+updateBody();
 
 console.log(inputEl.checked);
 
@@ -15,5 +17,11 @@ function updateBody(){
 }
 
 inputEl.addEventListener("input",() => {
-    updateBody()
+    updateBody();
+    updateLocalStorage();
+
 })
+
+function updateLocalStorage(){
+    localStorage.setItem("mode",JSON.stringify(inputEl.checked));
+}
