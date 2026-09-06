@@ -35,6 +35,10 @@ const projects = [
   {
     title:"Dark mode Toggle",
     path:"./Dark_mode_toggle/index.html"
+  },
+  {
+    title:"Real time character counter",
+    path:"./Real_time_character_counter/index.html"
   }
 
 ];
