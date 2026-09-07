@@ -39,6 +39,11 @@ const projects = [
   {
     title:"Real time character counter",
     path:"./Real_time_character_counter/index.html"
+  },
+  {
+    title:"Digital clock",
+    path:"./Digital_clock/index.html",
+    description: "IS RELATIVE!"
   }
 
 ];
