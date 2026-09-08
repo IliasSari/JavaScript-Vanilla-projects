@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Employee Management System</h1>
+            <p>Manage company staff, search for employees or add new ones to the list.</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by name or speciality...">
+            <button id="openModalBtn" class="btn btn-primary">+ Add new Employee</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr id="tableHeader">
+                        <!-- Dynamic JS Headers will be inserted here -->
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Dynamic JS Rows will be inserted here -->
+                </tbody>
+            </table>
+
+            <!-- Empty State Message -->
+            <div id="noResults" class="no-results hidden">
+                There are no results.
+            </div>
+        </div>
+
+        <footer>
+            <p>Total number of employees: <strong id="totalCount">0</strong></p>
+        </footer>
+    </div>
+
+    <div id="employeeModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Add new employee</h2>
+            <form id="addEmployeeForm">
+                <input type="hidden" id="editingId" value="">
+                <div class="form-group">
+                    <label for="name">Full name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Speciality:</label>
+                    <input type="text" id="role" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="closeModalBtn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -44,6 +44,11 @@ const projects = [
     title:"Digital clock",
     path:"./Digital_clock/index.html",
     description: "IS RELATIVE!"
+  },
+  {
+    title:"Employee Management app",
+    path:"./Employee_Management_app/index.html",
+    description:"Made it without any tutorial!"
   }
 
 ];
