@@ -49,6 +49,10 @@ const projects = [
     title:"Employee Management app",
     path:"./Employee_Management_app/index.html",
     description:"Made it without any tutorial!"
+  },
+  {
+    title:"Double Landing Page",
+    path:"./Double_Landing_Page/index.html"
   }
 
 ];
