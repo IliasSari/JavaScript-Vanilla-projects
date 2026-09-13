@@ -57,6 +57,10 @@ const projects = [
   {
     title:"Loan Calculator",
     path:"./Loan-calculator/index.html"
+  },
+  {
+    title:"New year countdown",
+    path:"./New-Year-Countdown/index.html"
   }
 
 ];
