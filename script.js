@@ -53,6 +53,10 @@ const projects = [
   {
     title:"Double Landing Page",
     path:"./Double_Landing_Page/index.html"
+  },
+  {
+    title:"Loan Calculator",
+    path:"./Loan-calculator/index.html"
   }
 
 ];
